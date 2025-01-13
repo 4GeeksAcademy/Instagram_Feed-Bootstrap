@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .img-container {
+            height: 350px !important;
+        }
+        .poetry {
+            white-space: pre-line;                  
+        }
+    </style>
+</head>
+<body>
+    
+    <!--Navbar-->
+    <nav class="navbar navbar-light navbar-expand-md bg-light">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <span class="fw-bold">
+                    <i class="fa-brands fa-instagram fa-xl" style="width: 30px; height: 20px; margin-right: 0;"></i>
+                    Instagram
+                </span>
+            </a>
+            <!-- navbar links -->
+            <div class="navbar-brand justify-content-end" id="main-nav" >
+                <ul class="navbar-nav">                        
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#newPost">Create a new post</button>
+                        </a>
+                    </li>
+                <!--Dropdown-->
+                    <li class="nav-item dropdown">
+                         <button class="btn btn-secondary dropdown-toggle mt-2" type="button" id="navbarDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear fa-lg"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end w-50" aria-labelledby="navbarDropdownMenu">
+                            <li><a href="#" class="dropdown-item">Profile</a></li>
+                            <li><a href="#" class="dropdown-item">Accesibility</a></li>
+                            <li><a href="#" class="dropdown-item">Privacy and Data</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Modal-->
+    <div class="modal fade" id="newPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="post" class="form-label">Caption:</label>
+                    <div class="form-floating">
+                        <textarea id="post" class="form-control" style="height: 80px"></textarea>
+                        <label for="post">Add the caption of your post here...</label>
+                    </div>
+                    <div class="mt-2">
+                        <button type="button" class="btn btn-outline-dark me-2"><i class="fa-sharp fa-solid fa-camera fa-lg"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa-sharp fa-solid fa-location-dot fa-lg"></i></button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Tabs-->
+    <div class="container-fluid my-5">
+        <nav>
+            <div class="nav nav-pills justify-content-center" id="nav-pill" role="tablist">
+                <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false"><i class="fa-solid fa-table-cells fa-lg"></i></button>
+                <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="true"><i class="fa-solid fa-square fa-lg"></i></button>
+            </div>
+        </nav>
+        <!--Grid-->
+        <div class="tab-content container-fluid" id="nav-tabContent">
+            <div class="tab-pane fade p-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="container mt-3">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2 g-lg-3">
+                      <div class="col">
+                        <div class="rounded bg-light h-100 img-container">
+                            <img src="https://files.pucp.education/puntoedu/wp-content/uploads/2021/03/16085808/vallejo-compo-1920x1080-1.jpg" class="img-fluid w-100 h-100 object-fit-cover rounded" alt="...">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="rounded bg-light h-100 img-container">
+                            <img src="https://www.revistaanfibia.cl/wp-content/uploads/2024/01/Maria-Luisa-Bombal_01Port.jpg" class="img-fluid w-100 h-100 object-fit-cover rounded" alt="...">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="rounded bg-light h-100 img-container">
+                            <img src="https://www.infobae.com/resizer/v2/LCYZ6PITCJDEPNAWKNBGRTUC7Q.jpg?auth=fcfb24ed90c05a76d9d00bfc3f38fb328fd1074b08bb954bcbcc937e6021158c&smart=true&width=1200&height=900&quality=85" class="img-fluid w-100 h-100 object-fit-cover rounded" alt="...">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="rounded bg-light h-100 img-container">
+                            <img src="https://artofdarkpod.com/wp-content/uploads/2021/11/BBB.jpg" class="img-fluid w-100 h-100 object-fit-cover rounded" alt="...">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="rounded bg-light h-100 img-container">
+                            <img src="https://www.latercera.com/resizer/v2/3KHIUKTXWBHQZEQVTRVKYNQXLQ.jpg?quality=80&smart=true&auth=5a0ec73839b5ffe3c426d2c469fa4e78aee6205995c2326f0357c1231e143fa8&width=690&height=502" class="img-fluid w-100 h-100 object-fit-cover rounded" alt="...">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="rounded bg-light h-100 img-container">
+                            <img src="https://i.pinimg.com/736x/39/f3/4e/39f34e8d56f20d2e40770a70128ff21d.jpg" class="img-fluid w-100 h-100 object-fit-cover rounded" alt="...">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="rounded bg-light h-100 img-container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDAPoa3-uiE8t0d-GKHej_WzvFxdM1kjkCiw&s" class="img-fluid w-100 h-100 object-fit-cover rounded" alt="...">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="rounded bg-light h-100 img-container">
+                            <img src="https://media.meer.com/attachments/f51544498b4de617a93ba2666aa4e9c6b6c8eb98/store/fill/860/645/3f3c8c742b685896f17715146e33099b9c5e0a07a1d3b9a7a9a6b52d1f82/Nicanor-Parra-1914-2018.jpg" class="img-fluid w-100 h-100 object-fit-cover rounded" alt="...">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="rounded bg-light h-100 img-container">
+                            <img src="https://render.fineartamerica.com/images/rendered/default/print/5.5/8/break/images/artworkimages/medium/3/alejandra-pizarnik-5-zoran-maslic.jpg" class="img-fluid w-100 h-100 object-fit-cover rounded" alt="...">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <!--Column-->
+            <div class="tab-pane fade show active p-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 mt-3">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h2>César Vallejo</h2>
+                                    <p>04/15</p>
+                                </div>
+                                <img src="https://files.pucp.education/puntoedu/wp-content/uploads/2021/03/16085808/vallejo-compo-1920x1080-1.jpg" alt="" class="card-img-top">
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <p class="fw-bold"><i class="fa-solid fa-heart fa-lg m-1"></i>3750</p>
+                                        <i class="fa-solid fa-bookmark fa-lg mt-2"></i>
+                                    </div>
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote fs-5">
+                                            <p class="poetryText">I, desgraciadamente,
+                                                el dolor crece en el mundo a cada rato,
+                                                crece a treinta minutos por segundo, paso a paso,
+                                                y la naturaleza del dolor, es el dolor dos veces
+                                                y la condición del martirio, carnívora, voraz,
+                                                es el dolor dos veces
+                                                y la función de la yerba purísima, el dolor
+                                                dos veces
+                                                y el bien de sér, dolernos doblemente.
+                                                
+                                            </p>
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                          César Vallejo, <cite title="Source Title">Los nueve monstruos.</cite>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h2>María Luisa Bombal</h2>
+                                    <p>05/06</p>
+                                </div>
+                                <img src="https://www.revistaanfibia.cl/wp-content/uploads/2024/01/Maria-Luisa-Bombal_01Port.jpg" alt="" class="card-img-top">
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <p class="fw-bold"><i class="fa-solid fa-heart fa-lg m-1"></i>6350</p>
+                                        <i class="fa-solid fa-bookmark fa-lg mt-2"></i>
+                                    </div>
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote fs-5 mb-4">
+                                            <p>
+                                            Porque aquello que quiso ser carcajada resonó tremendo gemido, clamor de aflicción de alguien que, dentro de su propio pecho, 
+                                            estuviera usurpando su risa y su sentir; de alguien desesperado y ardiendo en deseo de algo que sabe irremisiblemente perdido.
+                                            </p>  
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                          María Luisa Bombal, <cite title="Source Title">Lo secreto.</cite>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h2>Roberto Arlt</h2>
+                                    <p>04/15</p>
+                                </div>
+                                <img src="https://www.infobae.com/resizer/v2/LCYZ6PITCJDEPNAWKNBGRTUC7Q.jpg?auth=fcfb24ed90c05a76d9d00bfc3f38fb328fd1074b08bb954bcbcc937e6021158c&smart=true&width=1200&height=900&quality=85" alt="" class="card-img-top">
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <p class="fw-bold"><i class="fa-solid fa-heart fa-lg m-1"></i>4500</p>
+                                        <i class="fa-solid fa-bookmark fa-lg mt-2"></i>
+                                    </div>
+                                    <figure class="text-center">
+                                            <blockquote class="blockquote fs-5 mb-4">
+                                                <p>
+                                                    Sí, lo entiendo, y pienso que cada uno tiene que conocer en la vida muchas tristezas. 
+                                                    Lo notable es que cada tristeza es distinta de la otra, porque cada una de ellas se refiere a una alegría que no podemos tener. 
+                                                    Usted me habla de catástrofes presentes, y yo me acuerdo de sufrimientos pasados; tengo la sensa­ción de que me arrancaron el alma con una tenaza, 
+                                                    la pusieron sobre un yunque y descargaron tantos martillazos, hasta dejármela aplastada por completo.
+                                                </p>  
+                                            </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                          Roberto Arlt, <cite title="Source Title">Los lanzallamas.</cite>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h2>Roberto Bolaño</h2>
+                                    <p>07/15</p>
+                                </div>
+                                <img src="https://artofdarkpod.com/wp-content/uploads/2021/11/BBB.jpg" alt="" class="card-img-top">
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <p class="fw-bold"><i class="fa-solid fa-heart fa-lg m-1"></i>It`s Over 9000!</p>
+                                        <i class="fa-solid fa-bookmark fa-lg mt-2"></i>
+                                    </div>
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote fs-5 mb-4">
+                                            <p>
+                                                Durante un segundo de lucidez tuve la certeza de que nos habíamos vuelto locos. 
+                                                Pero a ese segundo de lucidez se antepuso un supersegundo de superlucidez (si me permiten la expresión) 
+                                                en donde pensé que aquella escena era el resultado lógico de nuestras vidas absurdas.
+                                            </p>  
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                          Roberto Bolaño, <cite title="Source Title">Los detectives salvajes.</cite>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h2>José Donoso</h2>
+                                    <p>12/07</p>
+                                </div>
+                                <img src="https://www.latercera.com/resizer/v2/3KHIUKTXWBHQZEQVTRVKYNQXLQ.jpg?quality=80&smart=true&auth=5a0ec73839b5ffe3c426d2c469fa4e78aee6205995c2326f0357c1231e143fa8&width=690&height=502" alt="" class="card-img-top">
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <p class="fw-bold"><i class="fa-solid fa-heart fa-lg m-1"></i>7580</p>
+                                        <i class="fa-solid fa-bookmark fa-lg mt-2"></i>
+                                    </div>
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote fs-5 mb-4">
+                                            <p>
+                                            Estoy solo en el centro de la tierra rodeado de paredes ciegas en este sótano que me comprime, 
+                                            rocas, ladrillos, tierra, huesos, cavo, cavando y rompiendo con las uñas y los dientes, el recuerdo 
+                                            de esa ventana mentirosa que habían colgado para que creyera que existía un afuera.
+                                            </p>  
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                          José Donoso, <cite title="Source Title">El obsceno pájaro de la noche.</cite>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h2>Gabriela Mistral</h2>
+                                    <p>01/10</p>
+                                </div>
+                                <img src="https://i.pinimg.com/736x/39/f3/4e/39f34e8d56f20d2e40770a70128ff21d.jpg" alt="" class="card-img-top">
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <p class="fw-bold"><i class="fa-solid fa-heart fa-lg m-1"></i>6300</p>
+                                        <i class="fa-solid fa-bookmark fa-lg mt-2"></i>
+                                    </div>
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote fs-5">
+                                            <p class="poetryText">Los barcos cuyas velas blanquean en el puerto
+                                                vienen de tierras donde no están los que no son míos;
+                                                sus hombres de ojos claros no conocen mis ríos
+                                                y traen frutos pálidos, sin la luz de mis huertos.
+                                                
+                                                Y la interrogación que sube a mi garganta
+                                                al mirarlos pasar, me desciende, vencida:
+                                                hablan extrañas lenguas y no la conmovida
+                                                lengua que en tierras de oro mi pobre madre canta.
+                                                
+                                            </p>
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                          Gabriela Mistral, <cite title="Source Title">Desolación.</cite>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h2>Idea Vilariño</h2>
+                                    <p>04/28</p>
+                                </div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDAPoa3-uiE8t0d-GKHej_WzvFxdM1kjkCiw&s" alt="" class="card-img-top">
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <p class="fw-bold"><i class="fa-solid fa-heart fa-lg m-1"></i>4650</p>
+                                        <i class="fa-solid fa-bookmark fa-lg mt-2"></i>
+                                    </div>
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote fs-5">
+                                            <p class="poetryText">Todo es muy simple mucho
+                                                más simple y sin embargo
+                                                aún así hay momentos
+                                                en que es demasiado para mí
+                                                en que no entiendo
+                                                y no sé si reírme a carcajadas
+                                                o si llorar de miedo
+                                                o estarme aquí sin llanto
+                                                sin risas
+                                                en silencio
+                                                asumiendo mi vida
+                                                mi tránsito
+                                                mi tiempo.
+                                                
+                                            </p>
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                          Idea Vilariño, <cite title="Source Title">Todo es muy simple.</cite>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h2>Nicanor Parra</h2>
+                                    <p>01/23</p>
+                                </div>
+                                <img src="https://media.meer.com/attachments/f51544498b4de617a93ba2666aa4e9c6b6c8eb98/store/fill/860/645/3f3c8c742b685896f17715146e33099b9c5e0a07a1d3b9a7a9a6b52d1f82/Nicanor-Parra-1914-2018.jpg" alt="" class="card-img-top">
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <p class="fw-bold"><i class="fa-solid fa-heart fa-lg m-1"></i>8630</p>
+                                        <i class="fa-solid fa-bookmark fa-lg mt-2"></i>
+                                    </div>
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote fs-5">
+                                            <p class="poetryText">Mi posición es ésta:
+                                                El poeta no cumple su palabra
+                                                Si no cambia los nombres de las cosas.
+                                                
+                                                ¿Con qué razón el sol
+                                                Ha de seguir llamándose sol?
+                                                ¡Pido que se llame Micifuz
+                                                El de las botas de cuarenta leguas!
+                                                
+                                                ¿Mis zapatos parecen ataúdes?
+                                                Sepan que desde hoy en adelante
+                                                Los zapatos se llaman ataúdes.
+                                                Comuníquese, anótese y publíquese
+                                                Que los zapatos han cambiado de nombre:
+                                                Desde ahora se llaman ataúdes.
+                                                
+                                            </p>
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                          Nicanor Parra, <cite title="Source Title">Cambios de nombre.</cite>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h2>Alejandra Pizarnik</h2>
+                                    <p>09/25</p>
+                                </div>
+                                <img src="https://render.fineartamerica.com/images/rendered/default/print/5.5/8/break/images/artworkimages/medium/3/alejandra-pizarnik-5-zoran-maslic.jpg" alt="" class="card-img-top">
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between mb-0">
+                                        <p class="fw-bold"><i class="fa-solid fa-heart fa-lg m-1"></i>5690</p>
+                                        <i class="fa-solid fa-bookmark fa-lg mt-2"></i>
+                                    </div>
+                                    <figure class="text-center">
+                                        <blockquote class="blockquote fs-5">
+                                            <p class="poetryText">Ampáralo niña ciega de alma
+                                                Ponle tus cabellos escarchados por el fuego
+                                                Abrázalo pequeña estatua de terror.
+                                                Señálale el mundo convulsionado a tus pies
+                                                A tus pies donde mueren las golondrinas
+                                                Tiritantes de pavor frente al futuro
+                                                Dile que los suspiros del mar
+                                                Humedecen las únicas palabras
+                                                Por las que vale vivir.
+                                                
+                                            </p>
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer">
+                                          Alejandra Pizarnik, <cite title="Source Title">A la espera de la oscuridad.</cite>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/de96cbd69b.js" crossorigin="anonymous"></script>
+</body>
+</html>
